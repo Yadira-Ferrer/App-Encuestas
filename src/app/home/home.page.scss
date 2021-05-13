@@ -25,3 +25,16 @@
 #container a {
   text-decoration: none;
 }
+
+#divcard {
+  height: 100%; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#cardAdmin {
+  height: 50%;
+  width: 30%;
+  padding: 2em;
+}

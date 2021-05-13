@@ -7,6 +7,12 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
+  segmentModel = 'administrador';
+
   constructor() {}
+
+  login (form) {
+    console.log(form.value);
+  }
 
 }
