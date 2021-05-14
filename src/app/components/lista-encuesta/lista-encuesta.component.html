@@ -3,7 +3,9 @@
     <ion-col>
       <ion-list>
         
-        
+        <ion-item *ngFor="let e of encuestas">
+          <ion-label>{{e.nombre}}</ion-label>
+        </ion-item>
 
       </ion-list>
     </ion-col>

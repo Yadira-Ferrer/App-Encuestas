@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Encuesta } from '../../interfaces/interfaces';
 
 @Component({
   selector: 'app-lista-encuesta',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./lista-encuesta.component.scss'],
 })
 export class ListaEncuestaComponent implements OnInit {
+
+  @Input() encuestas: Encuesta[];
 
   constructor() { }
 

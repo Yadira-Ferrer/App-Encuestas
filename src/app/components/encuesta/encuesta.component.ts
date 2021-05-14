@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Encuesta, Opcion } from 'src/app/interfaces/interfaces';
 import { Pregunta } from '../../interfaces/interfaces';
 import { ToastController } from '@ionic/angular';
@@ -15,7 +15,7 @@ export class EncuestaComponent implements OnInit {
   opcion: string = '';
   i_opcion: Opcion[] = [];
   i_pregunta: Pregunta[] = [];
-  i_encuesta: Encuesta[] = [];
+  @Input() i_encuesta: Encuesta[] = [];
 
   @Output() sendEncuesta = new EventEmitter();
 

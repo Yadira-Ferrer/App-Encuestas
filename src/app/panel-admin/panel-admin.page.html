@@ -30,9 +30,10 @@
 
 <ion-content class="ion-padding">
 
-    <app-lista-encuesta *ngIf="segmentModel === 'encuestas'"></app-lista-encuesta>
+    <app-lista-encuesta *ngIf="segmentModel === 'encuestas'" [encuestas]="encuestas"></app-lista-encuesta>
 
     <app-encuesta *ngIf="segmentModel === 'crear-encuesta'"
+                  [i_encuesta]="encuestas"
                   (sendEncuesta)="printEncuesta($event)"></app-encuesta>
 
 </ion-content>

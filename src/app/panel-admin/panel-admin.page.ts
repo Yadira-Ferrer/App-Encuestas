@@ -9,7 +9,7 @@ import { Encuesta } from '../interfaces/interfaces';
 export class PanelAdminPage implements OnInit {
 
   segmentModel = 'encuestas';
-  encuestas: Encuesta[];
+  encuestas: Encuesta[] = [];
 
   constructor() { }
 
