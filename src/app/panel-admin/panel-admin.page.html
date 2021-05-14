@@ -36,8 +36,10 @@
                   [i_encuesta]="encuestas"
                   (sendEncuesta)="printEncuesta($event)"></app-encuesta>
     
-    <app-cliente *ngIf="segmentModel === 'clientes'"></app-cliente>
+    <app-cliente *ngIf="segmentModel === 'clientes'" [usuarios]="usuarios" [encuestas]="encuestas"></app-cliente>
 
-    <app-cliente-registro *ngIf="segmentModel === 'registro-cliente'"></app-cliente-registro>
+    <app-cliente-registro *ngIf="segmentModel === 'registro-cliente'"
+                          [i_usuario]="usuarios"
+                          (sendUsuarios)="printUsuarios($event)"></app-cliente-registro>
 
 </ion-content>

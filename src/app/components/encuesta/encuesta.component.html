@@ -56,4 +56,26 @@
     </ion-col>
   </ion-row>
 
+  <ion-row>
+    <ion-col>
+      <ion-item>
+        <ion-icon name="help-outline" slot="start"></ion-icon>
+        <h3>PREGUNTAS</h3>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <ion-list *ngIf="i_pregunta.length > 0">
+        <ion-item *ngFor="let p of i_pregunta; let i = index;">
+          <ion-label>
+            <h2> {{i + 1}}. {{p.pregunta}}</h2>
+            <p *ngFor="let opcion of p.opciones"> - {{opcion.opcion}} </p>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-col>
+  </ion-row>
+
 </ion-grid>

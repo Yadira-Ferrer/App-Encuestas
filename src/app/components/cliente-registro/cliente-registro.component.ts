@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Usuario } from '../../interfaces/interfaces';
 
 @Component({
@@ -8,18 +8,24 @@ import { Usuario } from '../../interfaces/interfaces';
 })
 export class ClienteRegistroComponent implements OnInit {
 
-  usuario: string;
-  correo: string;
-  i_usuario: Usuario[] = [];
+  usuario: string = '';
+  correo: string = '';
+  @Input() i_usuario: Usuario[] = [];
+
+  @Output() sendUsuarios = new EventEmitter();
 
   constructor() { }
 
   ngOnInit() {}
 
   createUser() {
-    this.i_usuario.push({nombre:this.usuario,correo:this.correo});
-    this.usuario = '';
-    this.correo = '';
+    if ( this.usuario !== '' && this.correo !== '') {
+      this.i_usuario.push({nombre:this.usuario,correo:this.correo});
+      this.usuario = '';
+      this.correo = '';
+
+      this.sendUsuarios.emit(this.i_usuario);
+    }
   }
 
 }

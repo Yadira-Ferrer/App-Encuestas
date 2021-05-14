@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Encuesta } from '../interfaces/interfaces';
+import { Encuesta, Usuario } from '../interfaces/interfaces';
 
 @Component({
   selector: 'app-panel-admin',
@@ -10,6 +10,7 @@ export class PanelAdminPage implements OnInit {
 
   segmentModel = 'encuestas';
   encuestas: Encuesta[] = [];
+  usuarios: Usuario[] = [];
 
   constructor() { }
 
@@ -18,9 +19,13 @@ export class PanelAdminPage implements OnInit {
   }
 
   printEncuesta(event) {
-    console.log('PARENT');
     this.encuestas = event;
     console.log(this.encuestas);
+  }
+
+  printUsuarios(event) {
+    this.usuarios = event;
+    console.log(this.usuarios);
   }
 
 }
