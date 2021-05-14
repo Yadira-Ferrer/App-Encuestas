@@ -11,6 +11,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'panel-admin',
+    loadChildren: () => import('./panel-admin/panel-admin.module').then( m => m.PanelAdminPageModule)
+  },
 ];
 
 @NgModule({

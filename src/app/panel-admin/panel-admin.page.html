@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar style="padding: 0px 20px;">
+
+    <ion-title>PANEL ADMINISTRADOR</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/home']" color="tertiary">
+        <ion-icon slot="icon-only" name="power-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+
+  <ion-segment [(ngModel)]="segmentModel" color="tertiary">
+    <ion-segment-button value="encuestas">
+      <ion-label>Encuestas</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="crear-encuesta">
+      <ion-label>Crear Encuesta</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="clientes">
+      <ion-label>Clientes</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="registro-cliente">
+      <ion-label>Registrar Cliente</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+</ion-header>
+
+<ion-content class="ion-padding">
+
+    <app-lista-encuesta *ngIf="segmentModel === 'encuestas'"></app-lista-encuesta>
+
+    <app-encuesta *ngIf="segmentModel === 'crear-encuesta'"
+                  (sendEncuesta)="printEncuesta($event)"></app-encuesta>
+
+</ion-content>

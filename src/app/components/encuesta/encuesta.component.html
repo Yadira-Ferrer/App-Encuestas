@@ -1,0 +1,59 @@
+<ion-grid fixed>
+  
+  <ion-row>
+    <ion-col>
+      <form method="post">
+
+        <ion-row>
+          <ion-col size="12">
+            <ion-item>
+              <ion-label position="floating">Nombre de la encuesta</ion-label>
+              <ion-input [(ngModel)]="encuesta" type="text" name="nombre"></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        
+        <ion-row>
+
+          <ion-col size="9">
+            <ion-item>
+              <ion-label position="floating">Pregunta</ion-label>
+              <ion-input [(ngModel)]="pregunta" type="text" name="pregunta"></ion-input>
+            </ion-item>
+          </ion-col>
+
+          <ion-col size="3" class="ion-align-self-center">
+            <ion-button color="primary" expand="block" size="small" (click)="addQuestion()">Añadir Pregunta</ion-button>
+          </ion-col>
+
+        </ion-row>
+
+        <ion-row>
+
+          <ion-col size="9">
+            <ion-item>
+              <ion-label position="floating">Nueva Opción</ion-label>
+              <ion-input [(ngModel)]="opcion" type="text" name="opcion"></ion-input>
+            </ion-item>
+          </ion-col>
+
+          <ion-col size="3" class="ion-align-self-center">
+            <ion-button color="secondary" expand="block" size="small" (click)="addOption()">Añadir Opción</ion-button>
+          </ion-col>
+
+        </ion-row>
+
+        <ion-row>
+          <ion-col size="6">
+            <ion-button color="tertiary" expand="block" (click)="createSurvey()">Finalizar</ion-button>
+          </ion-col>
+          <ion-col size="6">
+            <ion-button color="medium" expand="block" (click)="cancel()">Cancelar</ion-button>
+          </ion-col>
+        </ion-row>
+
+      </form>
+    </ion-col>
+  </ion-row>
+
+</ion-grid>
