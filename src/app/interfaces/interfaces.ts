@@ -14,3 +14,8 @@ export interface Opcion {
     opcion: string,
     estado: boolean,
 }
+
+export interface Usuario {
+    nombre: string
+    correo: string
+}

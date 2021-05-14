@@ -5,17 +5,23 @@ import { IonicModule } from '@ionic/angular';
 import { EncuestaComponent } from './encuesta/encuesta.component';
 import { FormsModule } from '@angular/forms';
 import { ListaEncuestaComponent } from './lista-encuesta/lista-encuesta.component';
+import { ClienteComponent } from './cliente/cliente.component';
+import { ClienteRegistroComponent } from './cliente-registro/cliente-registro.component';
 
 
 
 @NgModule({
   declarations: [
     EncuestaComponent,
-    ListaEncuestaComponent
+    ListaEncuestaComponent,
+    ClienteComponent,
+    ClienteRegistroComponent
   ],
   exports: [
     EncuestaComponent,
-    ListaEncuestaComponent
+    ListaEncuestaComponent,
+    ClienteComponent,
+    ClienteRegistroComponent
   ],
   imports: [
     CommonModule,

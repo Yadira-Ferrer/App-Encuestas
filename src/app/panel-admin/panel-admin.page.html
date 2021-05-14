@@ -35,5 +35,9 @@
     <app-encuesta *ngIf="segmentModel === 'crear-encuesta'"
                   [i_encuesta]="encuestas"
                   (sendEncuesta)="printEncuesta($event)"></app-encuesta>
+    
+    <app-cliente *ngIf="segmentModel === 'clientes'"></app-cliente>
+
+    <app-cliente-registro *ngIf="segmentModel === 'registro-cliente'"></app-cliente-registro>
 
 </ion-content>
