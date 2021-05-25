@@ -43,8 +43,10 @@ export class EncuestaComponent implements OnInit {
   }
 
   addOption() {
-    this.i_opcion.push({opcion: this.opcion, estado:false});
-    this.opcion = '';
+    if ( this.opcion !== '' ){
+      this.i_opcion.push({opcion: this.opcion, estado:false});
+      this.opcion = '';
+    }
   }
 
   async presentToast(message,color) {
